@@ -4,10 +4,10 @@
 #include "Enemy.h"
 class FlyingBot : public Enemy {
       public:
-      FlyingBot();
-      
-      void move() override;
-      void attack() override;
+            FlyingBot();
+            
+            void move() override;
+            void attack() override;
 };
 
 #endif
