@@ -16,9 +16,7 @@ set(HDRS
     lightShield.h
     player.h
     regularBot.h
-    sageBoss.h
     shield.h
-    skyeBoss.h
     soul.h
     weapon.h
 )
@@ -34,15 +32,10 @@ set(SRCS
     lightShield.cpp
     player.cpp
     regularBot.cpp
-    sageBoss.cpp
     shield.cpp
-    skyeBoss.cpp
     soul.cpp
     weapon.cpp
 )
-
-# Add path name to configuration file
-configure_file(path_config.h.in path_config.h)
 
 # Add executable based on the source files
 add_executable(${PROJ_NAME} ${HDRS} ${SRCS})
