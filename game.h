@@ -29,8 +29,7 @@ class Game {
             void Update(float dt);
             void Render();
 
-            void restartGame(); 
-            void saveCheckpoint(); 
+            void restartGame();
             void updateHUD();
 };
 
