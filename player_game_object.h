@@ -5,8 +5,6 @@
 #include <GLFW/glfw3.h>
 
 namespace game {
-
-    // Inherits from GameObject
     class PlayerGameObject : public GameObject {
         private:
             glm::vec2 velocity_;
@@ -26,13 +24,19 @@ namespace game {
             float dashCooldown;
             float currentDashCooldown;
 
+            int empoweredAttacksLeft;
+
+            // --- Invulnerability State ---
+            bool invulnerability;
+            float invulnerabilityTimer;
+
         public:
             PlayerGameObject(const glm::vec3 &position, Geometry *geom, Shader *shader, GLuint texture);
 
             void Update(double delta_time, GLFWwindow* window, glm::vec2 mouse_world_pos);
             
             // --- New Mechanics ---
-            void Dash();
+            void Dash(glm::vec2 mouse_world_pos);
             void attack();
             void dashAttack();
 
